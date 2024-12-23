@@ -166,18 +166,27 @@ a:hover {
 }
 
 .bank-info {
-    flex: 1;
-    text-align: center;
-    padding: 10px 7.5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+height: var(--size); /* Đảm bảo biến được tính toán đúng */
+flex: 1;
+text-align: center;
+padding: 10px 7.5px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+overflow: visible; /* Đảm bảo không bị cắt */
+min-height: 80px; /* Thêm giá trị tối thiểu */
 }
-
-.bank-info>p {
-    font-weight: 500;
-    line-height: 1;
+@media only screen and (max-width: 768px) {
+.bank-info {
+font-size: 14px;
+padding: 10px 5px;
+}
+}
+.bank-info > p {
+font-weight: 500;
+line-height: 1;
+font-size: 14px;
 }
 
 .bank-name {
